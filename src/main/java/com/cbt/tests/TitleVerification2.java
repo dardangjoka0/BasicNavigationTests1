@@ -17,7 +17,7 @@ public class TitleVerification2 {
         {
             driver.get(urls.get(i));
             Thread.sleep(1000);
-            dummy=driver.getTitle().toLowerCase().trim();
+            dummy=driver.getTitle().toLowerCase().replace(" ","");
             verifyEquals(urls.get(i).contains(dummy));
         }
         closeDriver();
